@@ -1,0 +1,103 @@
+.rent-car-container .img-fluid{
+    height: 25em;
+}
+
+.rent-car-container .contents-fleet{
+        width: 25%;
+        margin: 0 auto;
+        bottom: -36%;
+        text-align: center;
+}
+.rent-car-container .container b{
+    font-family: var(--fontBold);
+    color: var(--colorRed);
+}
+.rent-car-container b{
+    font-family: var(--fontExtraBold);
+    color: var(--colorFont);
+}
+.rent-car-container p{
+    font-family: var(--fontRegular);
+
+}
+.rent-car-container button{
+    font-family: var(--fontBold);
+    background-color: var(--colorRed);
+    border: none;
+    padding: 8px 17px;
+}
+.rent-car-container .contents-fleet .infor_fleet{
+    left: 0 !important;
+    right: 0;
+    margin: auto;
+}
+.rent-car-container .contents-fleet .fleet-item {
+    width: 100%;
+}
+.rent-car-container .contents-fleet .fleet-item a img{
+    /* width: 100%; */
+    height: 100%;
+}
+.modal.fade .modal-dialog {
+
+    transform: translate(0,-24px);
+}
+
+@media only screen and (max-width: 480px){
+    /* .rent-car-container .contents-fleet{
+       display: none;
+} */
+.rent-car-container .boxFleet{
+    display: none;
+
+}
+.rent-car-container .img-fluid{
+    object-fit: cover;
+    height: 15em !important;
+}
+.modal-dialog {
+    width: 90% !important;
+    margin: 0 auto;
+}
+.modal-title{
+    font-size: 17px;
+}
+.modal-dialog label , .modal-dialog input , .modal-dialog select{
+    font-size: 15px;
+
+}
+}
+@media only screen and (max-width: 768px){  
+    .rent-car-container .boxFleet{
+        display: none;
+    
+    }
+    .rent-car-container .img-fluid{
+        object-fit: cover;
+        height: 19em;
+    }
+    .modal.fade .modal-dialog {
+
+        transform: translate(0,3px);
+    }
+    .modal-dialog {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+ @media only screen and (max-width: 992px){
+    .rent-car-container .contents-fleet{
+        bottom: -80% !important;
+}
+.rent-car-container .img-fluid{
+    object-fit: cover;
+    height: 20em;
+}
+ }
+
+ @media only screen and (max-width: 1500px){
+    .rent-car-container .contents-fleet{
+        bottom: -60% ;
+}
+  
+  }

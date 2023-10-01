@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/datve.css"/>
+
+</head>
+
+<body class="app">
+    <!-- ---------------------------------------------------Header ------------------------------------------------>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0 0">
+            <div class="container-fluid navbar-header width-header align-items-center flex-wrap">
+                <a class="navbar-brand" href="/">
+                    <img src="/images/logo.png" alt="" style="width: 100%; object-fit: cover" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- {/* <span class="navbar-toggler-icon" /> */} -->
+                    <svg class="navbar-toggler-icon" xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 448 512" style="fill: #ffffff">
+                        <path
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                </button>
+                <div class="midTop-header align-items-center" style="width: 67%">
+                    <ul class="navbar-nav d-flex justify-content-between align-items-center" style="height: 100%">
+                        <li class="nav-item icon-header">
+                            <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span style="padding-right: 20px;">Công viên phần mềm Quang QTSC Building 1</span>
+                        </li>
+                        <li class="nav-item icon-header">
+                            <span class="icon"><i class="fa-solid fa-phone-volume"></i></span>
+                            <span>HotLine: 0369540397</span>
+                        </li>
+                        <li class="nav-item iconband-header">
+                            <ul class="navbar-nav d-flex justify-content-between">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                        <path
+                                            d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                        <path
+                                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                                        <path
+                                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="width-header menu collapse navbar-collapse show" id="navbarSupportedContent"
+                    style="margin-top: 10px; z-index: 100">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Trang chủ</a>
+                            <!-- <NavLink  style={navLinkStyle}  class="nav-link" to="/">Trang chủ</NavLink> -->
+                        </li>
+                        <li class="nav-item">
+                            <a href="thuexe.html" class="nav-link">Thuê xe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="gioithieu.html" class="nav-link">Giới Thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="lienhe.html" class="nav-link">Liên hệ</a>
+                        </li>
+                        <li class="nav-item">
+                              <a href="tuyendung.html" class="nav-link">Tuyển dụng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="tintuc.html" class="nav-link">Tin tức</a>
+                        </li>
+                    </ul>
+                    <div class="login-button">
+                <a href="dangnhap.html" type="button" class="btn button btn-login" style="  padding: 5px 5px; width: 175px;">
+              <i class="fa-solid fa-user" style="margin-right: 10px"></i>
+              <span> Đăng nhập</span>
+            </a>
+          </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ---------------------------------------------------END  Header ------------------------------------------------>
+
+
+    <!-- ---------------------------------------------------Main ------------------------------------------------>
+    <main class='mt-10'>
+         <div class='width-main'>
+            <!-- {/* ---------------------------tên chuyến xe (TP.HCM -> ĐÀ LẠT ) từ đâu đến đâu ----------------------------*/} -->
+            <div class='routes-bus-container'>
+                <div class=" d-flex align-items-center">
+                    <div class='w-25 text-center'><img src="images/xe2.gif" alt="" style="width:65%" /></div>
+                    <div class='text-center w-50 ' >
+                        <h5 class='p-0 m-0'>TP.Hồ Chí Minh - Đà Lạt</h5>
+                        <span class='date_go'>10/08/2023</span>
+                    </div>
+                    <div class='w-25 text-center'><img src="images/city2.jpg" alt=""  style="width:63%" /></div>
+                </div>
+
+            <!-- {/* ---------------------------CÁC BƯỚC THỰC HIỆN MUA VÉ TRÊN MOBILE----------------------------*/} -->
+
+                <div class='steps-booking-contents'>
+                <div class='row align-items-center p-2' style="margin:0 auto; width:98%">
+                    <div class='col text-center tabs-step active-step' data-tabs="step1">
+                        <span class='position-relative'>
+                            <svg width="22" height="22" viewBox="0 0 15 15"  xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7.5" cy="7.5" r="7.5" fill="#AEACAC"fillopacity="0.8" />
+                            </svg>
+                            <span class='number-step' >1</span>
+                        </span>
+                        
+                        <br />
+                        <span>Chọn ghế</span>
+                    </div>
+                    <div class='col border-step'>
+                    </div>
+                    <div class='col  text-center  tabs-step' data-tabs="step2">
+                        <span class='position-relative'>
+                            <svg width="22" height="22" viewBox="0 0 15 15"  xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7.5" cy="7.5" r="7.5" fill="#AEACAC"fillopacity="0.8" />
+                            </svg>
+                            <span class='number-step' >2</span>
+                        </span>
+                        
+                        <br />
+                        <span>Địa điểm </span>
+                    </div>
+                    <div class='col border-step'>
+                    </div>
+                    <div class='col  text-center  tabs-step' data-tabs="step3">
+                        <span class='position-relative'>
+                            <svg width="22" height="22" viewBox="0 0 15 15"  xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7.5" cy="7.5" r="7.5" fill="#AEACAC"fillopacity="0.8" />
+                            </svg>
+                            <span class='number-step' >3</span>
+                        </span>
+                        
+                        <br />
+                        <span>Thông tin</span>
+                    </div>
+                    <div class='col border-step '>
+                    </div>
+                    <div class='col  text-center  tabs-step' data-tabs="step4">
+                        <span class='position-relative'>
+                            <svg width="22" height="22" viewBox="0 0 15 15"  xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7.5" cy="7.5" r="7.5" fill="#AEACAC"fillopacity="0.8" />
+                            </svg>
+                           <span class='number-step' >4</span> 
+                        </span>
+                        
+                        <br />
+                        <span>Thanh toán</span>
+                    </div>
+                </div>
+            </div>
+            <!-- {/* ------------------------END---CÁC BƯỚC THỰC HIỆN MUA VÉ TRÊN MOBILE----------------------------*/} -->
+
+            </div>
+            <!-- {/* --------------------------END -tên chuyến xe  từ đâu đến đâu ----------------------------*/} -->
+        
+            <div class='width-main-items my-5'>
+                <div class='contents-items-choose'>
+                    <div class='row'>
+                        <div class='col-md-8  card'>
+                            <div class='items-contents'>
+                                <!-- {/* --------------------------- BƯỚC 1 CHỌN GHẾ---------------------------*/} -->
+
+                                <div class='items-chair items-choose active-step-item' id='step1'>
+                                <div class='d-flex justify-content-between'>
+                                    <h5>Chọn ghế</h5>
+                                <!-- {/* ---------------------------THÔNG TIN XE --------------------------*/} -->
+
+                                    <h6 class=' position-relative' id='infor_bus_router' style="cursor:pointer">Thông tin xe</h6>
+                                    
+                                    <div class='position-absolute infor_bus_router ' >
+                                        <div class='py-3'>
+                                            <div class='d-flex justify-content-between px-3 pb-2'>
+                                                <h5 >Chính sách</h5>
+                                                <span class='pe-1' id='close-infor' style="cursor:pointer">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512" style="fill:#cececf">
+                                                        <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                                                    </svg>
+                                                </span>
+                                           </div>
+                                           <div class='row overflow-auto' style="width:95%;margin:0 auto">
+                                                <div class='items_infor_bus_router '>
+                                                    <h6>Chính sách huỷ vé</h6>
+                                                    <ul>
+                                                        <li>Chỉ được chuyển đổi vé 1 lần duy nhất</li>
+                                                        <li>Chi phí hủy vé từ 10% – 30% giá vé tùy thuộc thời gian hủy vé so với giờ khởi hành ghi trên vé và số lượng vé cá nhân/tập thể áp dụng theo các quy định hiện hành.</li>
+                                                        <li>Quý khách khi có nhu cầu muốn thay đổi hoặc hủy vé đã thanh toán, cần liên hệ với Trung tâm tổng đài 1900 6067 hoặc quầy vé chậm nhất trước 24h so với giờ xe khởi hành được ghi trên vé, trên email hoặc tin nhắn để được hướng dẫn thêm.</li>
+
+                                                    </ul>
+                                                    <hr />
+                                                </div>
+                                                
+                                                <div  class='items_infor_bus_router'>
+                                                    <h6>Yêu cầu khi lên xe</h6>
+                                                    <ul>
+                                                        <li>Có mặt tại Văn phòng/Bến xe (Địa điểm xe đón trực tiếp) trước 30 phút để làm thủ tục lên xe (đối với ngày lễ tết cần ra trước 60 phút).</li>
+                                                        <li>Không mang thức ăn/đồ uống có mùi lên xe.</li>
+                                                        <li>Không hút thuốc, không sử dụng đồ uống có cồn hoặc sử dụng chất kích thích trên xe.</li>
+                                                        <li>Không mang các vật dễ cháy nổ lên xe.</li>
+                                                        <li>Không vứt rác trên xe.</li>
+                                                        <li>Không mang động vật lên xe.</li>
+
+                                                    </ul>
+                                                    <hr />
+
+                                                </div>
+                                                <div  class='items_infor_bus_router'>
+                                                    <h6>Hành lý xách tay</h6>
+                                                    <ul>
+                                                        <li>Tổng trọng lượng hành lý không vượt quá 20kg</li>
+                                                        <li>Không vận chuyển hàng hoá cồng kềnh</li>
+                                                
+
+                                                    </ul>
+                                                    <hr />
+
+                                                </div>
+                                                <div  class='items_infor_bus_router'>
+                                                    <h6>Trẻ em dưới 6 tuổi và phụ nữ có thai</h6>
+                                                    <ul>
+                                                        <li>Trẻ em dưới 6 tuổi, cao từ 1.3m trở xuống, cân nặng dưới 30kg thì không phải mua vé.</li>
+                                                        <li>Trong trường hợp trẻ em không thoả 1 trong 3 tiêu chí trên sẽ mua 01 vé tương đương với người lớn</li>
+                                                        <li>Mỗi người lớn sẽ đi kèm tối đa một trẻ em.</li>
+                                                        <li>Phụ nữ có thai cần đảm bảo sức khoẻ trong suốt quá trình di chuyển.</li>
+                                                        <li>Không vứt rác trên xe.</li>
+                                                        <li>Không mang động vật lên xe.</li>
+
+                                                    </ul>
+                                                    <hr />
+
+                                                </div>
+                                                <div  class='items_infor_bus_router'>
+                                                    <h6>Vé đón đường</h6>
+                                                    <ul>
+                                                        <li>Trường hợp có nhu cầu lên xe dọc đường, Quý khách vui lòng liên hệ tổng đài 19006067 để đăng kí trước ít nhất 2 tiếng so với giờ xe khởi hành và vui lòng chuẩn bị hành lý nhỏ gọn (tối đa 20kg).</li>
+                                                        <li>Lưu ý, chúng tôi chỉ hỗ trợ đón ở một số địa điểm thuận tiện nằm trên lộ trình</li>
+                            
+                                                    </ul>
+                                                </div>
+                                           </div>
+                                        </div>
+                                    </div>
+                                <!-- {/* ------------------------END---THÔNG TIN XE --------------------------*/} -->
+
+                                </div>
+                                <div class='row px-4 py-3 '>
+                                    <!-- {/*-------------------- SỐ GHẾ TẦNG DƯỚI--------------------------*/} -->
+                                    <div class='items-FloorDown col-sm-4 '>
+                                        <h5 class='text-center' style=" font-size: 1.1em">Tầng Dưới</h5>
+                                        <div class='row'>
+                                            <div class='d-flex  justify-content-between  m-auto py-1'>
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">A01</span> 
+                                                </div>
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                                fill="#AEACAC"
+                                                               fillopacity="0.8" />
+                                                        </svg>
+                                                    <span class='name-chair position-absolute' style="font-size:0.6em; left:13px;top:3px">A02</span> 
+                                                </div>
+                                            </div>
+                                            <div class='d-flex  justify-content-between  m-auto py-1' >
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">A03</span> 
+                                                </div>
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">A04</span> 
+                                                </div>
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">A05</span> 
+                                                </div>
+                                            </div>
+                                            <div class='d-flex  justify-content-between  m-auto py-1' >
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">A06</span> 
+                                                </div>
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">A07</span> 
+                                                </div>
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">A08</span> 
+                                                </div>
+                  
+
+                                            </div>
+                                            <div class='d-flex  justify-content-between  m-auto py-1' >
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">A09</span> 
+                                                </div>
+                                                   <div class=' position-relative chair-items' style="cursor: pointer;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99"
+                                                        />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">A10</span> 
+                                                </div>
+                                                   <div class=' position-relative chair-items' style="cursor: pointer;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99"
+                                                            />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">A11</span> 
+                                                </div>
+                                            </div>
+                                            <div class='d-flex  justify-content-between  m-auto py-1' >
+                                                <div class=' position-relative chair-items' style="cursor: pointer;" >
+                                                    
+                                                <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path style="z-index: 5;"
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99" 
+                                                             />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">A12</span> 
+                                                </div>
+                                                <div class=' position-relative chair-items' style="cursor: pointer;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path style="z-index: 5;"
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99"
+                                                            />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">A13</span> 
+                                                </div>
+                                                <div class=' position-relative chair-items' style="cursor: pointer;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path style="z-index: 5;"
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99"
+                                                            />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">A14</span> 
+                                                </div>
+                                            </div>
+                                            <div class='d-flex  justify-content-between  m-auto py-1' >
+                                                   <div class=' position-relative chair-items' style="cursor: pointer;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99"
+                                                           />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">A15</span> 
+                                                </div>
+                                                   <div class=' position-relative chair-items' style="cursor: pointer;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99"
+                                                            />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">A16</span> 
+                                                </div>
+                                                   <div class=' position-relative chair-items' style="cursor: pointer;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99"
+                                                            />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">A17</span> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                   
+                                    </div>
+                                    <!-- {/*----------------END---- SỐ GHẾ TẦNG DƯỚI --------------------------*/} -->
+
+
+                                    <!-- {/*-------------------- SỐ GHẾ TẦNG TRÊN--------------------------*/} -->
+                                    <div class='items-FloorUp col-sm-4'>
+                                        <h5 class='text-center' style=" font-size: 1.1em">Tầng trên</h5>
+                                        <div class='row'>
+                                            <div class='d-flex  justify-content-between  m-auto py-1'>
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">B01</span> 
+                                                </div>
+                                                   <div class=' position-relative ' style="cursor: no-drop;">
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                                fill="#AEACAC"
+                                                               fillopacity="0.8" />
+                                                        </svg>
+                                                    <span class='name-chair position-absolute' style="font-size:0.6em; left:13px;top:3px">B02</span> 
+                                                </div>
+                                            </div>
+                                            <div class='d-flex  justify-content-between  m-auto py-1' >
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">B03</span> 
+                                                </div>
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">B04</span> 
+                                                </div>
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">B05</span> 
+                                                </div>
+                                            </div>
+                                            <div class='d-flex  justify-content-between  m-auto py-1' >
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">B06</span> 
+                                                </div>
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">B07</span> 
+                                                </div>
+                                                   <div class=' position-relative ' style="cursor: no-drop;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">B08</span> 
+                                                </div>
+                  
+
+                                            </div>
+                                            <div class='d-flex  justify-content-between  m-auto py-1' >
+                                                   <div class=' position-relative '  style="cursor: no-drop;">
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#AEACAC"
+                                                           fillopacity="0.8" />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px">B09</span> 
+                                                </div>
+                                                   <div class=' position-relative chair-items' style="cursor: pointer;">
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99"
+                                                        />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">B10</span> 
+                                                </div>
+                                                   <div class=' position-relative chair-items' style="cursor: pointer;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99"
+                                                            />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">B11</span> 
+                                                </div>
+                                            </div>
+                                            <div class='d-flex  justify-content-between  m-auto py-1' >
+                                                   <div class=' position-relative chair-items' style="cursor: pointer;" >
+                                                <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99"
+                                                             />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">B12</span> 
+                                                </div>
+                                                   <div class=' position-relative chair-items' style="cursor: pointer;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99"
+                                                            />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">B13</span> 
+                                                </div>
+                                                   <div class=' position-relative chair-items' style="cursor: pointer;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99"
+                                                            />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">B14</span> 
+                                                </div>
+                                            </div>
+                                            <div class='d-flex  justify-content-between  m-auto py-1' >
+                                                   <div class=' position-relative chair-items' style="cursor: pointer;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99"
+                                                           />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">B15</span> 
+                                                </div>
+                                                   <div class=' position-relative chair-items' style="cursor: pointer;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99"
+                                                            />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">B16</span> 
+                                                </div>
+                                                   <div class=' position-relative chair-items' style="cursor: pointer;" >
+                                                    <svg width="43" height="33" viewBox="0 0 43 33" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M36.5 9.33333V5.75C36.5 2.79375 33.9688 0.375 30.875 0.375H12.125C9.03125 0.375 6.5 2.79375 6.5 5.75V9.33333C3.40625 9.33333 0.875 11.7521 0.875 14.7083V23.6667C0.875 26.6229 3.40625 29.0417 6.5 29.0417V30.8333C6.5 31.8187 7.34375 32.625 8.375 32.625C9.40625 32.625 10.25 31.8187 10.25 30.8333V29.0417H32.75V30.8333C32.75 31.8187 33.5938 32.625 34.625 32.625C35.6562 32.625 36.5 31.8187 36.5 30.8333V29.0417C39.5938 29.0417 42.125 26.6229 42.125 23.6667V14.7083C42.125 11.7521 39.5938 9.33333 36.5 9.33333ZM10.25 5.75C10.25 4.76458 11.0938 3.95833 12.125 3.95833H30.875C31.9062 3.95833 32.75 4.76458 32.75 5.75V10.7308C31.6063 11.7162 30.875 13.1317 30.875 14.7083V18.2917H12.125V14.7083C12.125 13.1317 11.3938 11.7162 10.25 10.7308V5.75ZM38.375 23.6667C38.375 24.6521 37.5312 25.4583 36.5 25.4583H6.5C5.46875 25.4583 4.625 24.6521 4.625 23.6667V14.7083C4.625 13.7229 5.46875 12.9167 6.5 12.9167C7.53125 12.9167 8.375 13.7229 8.375 14.7083V21.875H34.625V14.7083C34.625 13.7229 35.4688 12.9167 36.5 12.9167C37.5312 12.9167 38.375 13.7229 38.375 14.7083V23.6667Z"
+                                                            fill="#2E8A99"
+                                                            />
+                                                    </svg>
+                                                    <span class='name-chair position-absolute'  style="font-size:0.6em; left:13px;top:3px;color:#2E8A99">B17</span> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- {/*----------------END---- SỐ GHẾ TẦNG TRÊN--------------------------*/} -->
+
+                                    <!-- {/*-------------------- MÔ TẢ MÀU ( ĐỎ LÀ ĐANG CHỌN, XANH LÀ CÒN TRỐNG, XÁM LÀ ĐÃ BÁN)--------------------------*/} -->
+                                    <div class='items-Floor-des col-sm-4'>
+                                        <div class='row mt-4'>
+                                            <div class='item-des d-flex my-2'>
+                                                <span>
+                                                    <svg width="15" height="15" viewBox="0 0 15 15"  xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="7.5" cy="7.5" r="7.5" fill="#AEACAC"fillopacity="0.8" />
+                                                    </svg>
+                                                </span>
+                                                <span class='ms-3'>
+                                                    Đã bán
+                                                </span>
+                                            </div>
+                                            <div class='item-des d-flex  my-2'>
+                                                <span>
+                                                    <svg width="15" height="15" viewBox="0 0 15 15"  xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="7.5" cy="7.5" r="7.5" fill="#2E8A99"fillopacity="0.8" />
+                                                    </svg>
+                                                </span>
+                                                <span class='ms-3'>
+                                                Còn trống
+                                                </span>
+                                            </div>
+                                            <div class='item-des d-flex my-2'>
+                                                <span>
+                                                    <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="7.5" cy="7.5" r="7.5" fill="#E63946"fillopacity="0.8" />
+                                                    </svg>
+                                                </span>
+                                                <span class='ms-3'>
+                                                Đang chọn
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- {/* --------------------------- HIỆN SỐ GHẾ ĐÃ CHỌN TRÊN MOBILE--------------------------*/} -->
+                                <div class='chair-chosen'>
+                                    <hr />
+                                    Ghế: <span class="item-chair-chosen" id="item-chair-chosen"></span>
+                                </div>
+                                <!-- {/* ------------------------END--- HIỆN SỐ GHẾ ĐÃ CHỌN MOBILE- --------------------------*/} -->
+
+                                <!-- {/* ------------------------ NÚT BẤM TIẾP TỤC TRÊN MOBILE ĐỂ ĐẾN VỚI BƯỚC TIẾP THEO --------------------------*/} -->
+                                <div class='button_conti-step'>
+                                    <div class='d-flex justify-content-end mt-3 btn-handle'>
+                                        <button class='btn' hidden>Quay lai</button>
+                                        <button class='btn button_step' type='button' data-next='step2'>Tiếp tục</button>
+                                    </div>
+                                  </div>
+                                <!-- {/* ------------------------END --- NÚT BẤM TIẾP TỤC TRÊN MOBILE ĐỂ ĐẾN VỚI BƯỚC TIẾP THEO --------------------------*/} -->
+
+                                </div>
+                                <!-- {/* -------------------------END-- BƯỚC CHỌN GHẾ---------------------------*/} -->
+
+                                 <div class='border-bt'></div>
+
+                                <!-- {/* --------------------------- BƯỚC 2 ĐIỂM ĐÓN TRẢ KHÁCH---------------------------*/} -->
+
+                                <div class='pickUp-dropOff-location-contents my-4  items-choose' id='step2'>
+                                    <div>
+                                        <h5>Địa điểm đón trả</h5>
+                                        <div class='mt-3'>
+                                            <form action="" class='row'>
+                                                <div class="form-group">
+                                                    <label htmlFor="diemdon" class='mb-2'>Điểm đón</label>
+                                                    <select name="" id="diemdon" class='form-control'>
+                                                        <option value="">Bến xe Miền Đông Mới</option>
+                                                        <option value="">Bến xe An Sương</option>
+
+                                                    </select>
+                                                   
+                                                </div>
+                                                <div class="form-group">
+                                                    <label htmlFor="diemdon"  class='mb-2'>Điểm trả</label>
+                                                    <select name="" id="diemdon" class='form-control'>
+                                                        <option value="">Bến xe Đà lạt</option>
+                                                        <option value="">Bảo Lộc</option>
+
+                                                    </select>
+                                                   
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                <!-- {/* --------------------------- NÚT BẤM TIẾP TỤC TRÊN MOBILE ĐỂ ĐẾN VỚI BƯỚC TIẾP THEO --------------------------*/} -->
+
+                                    <div class='button_conti-step'>
+                                    <div class='d-flex justify-content-between mt-3 btn-handle'>
+                                        <button class='btn button_step' type='button' data-next='step1'>Quay lại</button>
+                                        <button  class='btn button_step' type='button' data-next='step3'>Tiếp tục</button>
+                                    </div>
+                                  </div>
+                                <!-- {/* ------------------------END --- NÚT BẤM TIẾP TỤC TRÊN MOBILE ĐỂ ĐẾN VỚI BƯỚC TIẾP THEO --------------------------*/} -->
+
+                                </div>
+                                <!-- {/* -----------------------END---- BƯỚC 2 ĐIỂM ĐÓN TRẢ KHÁCH---------------------------*/} -->
+
+                                <div class='border-bt'></div>
+
+                                <!-- {/* --------------------------- BƯỚC 3 NHẬP THÔNG TIN ĐẶT VÉ ---------------------------*/} -->
+                                <div class='Client-information-contents my-4  items-choose' id='step3'>
+                                    <div class='row mt-3'>
+                                        <div class='items-infor col-6'>
+                                            <h5 >Thông tin khách hàng</h5>
+                                            <div class='mt-4'>
+                                                <form action="">
+                                                <div class="form-group">
+                                                        <label  class='mb-2'>Họ và tên</label>
+                                                        <input type="text" class="form-control" placeholder="Enter name"/>
+                                                    </div>
+                                                    <div class="form-group mt-3">
+                                                        <label  class='mb-2'>Số điện thoại</label>
+                                                        <input type="number" class="form-control" placeholder="Enter phone"/>
+                                                    </div>
+                                                    <div class="form-group mt-3">
+                                                        <label  class='mb-2'>Email</label>
+                                                        <input type="email" class="form-control" placeholder="Enter email"/>
+                                                    </div>
+                                                    
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class='items-terms-notes col-6'>
+                                            <h5 class='text-center'>ĐIỀU KHOẢN & LƯU Ý</h5>
+                                            <div class='mt-4' style="text-align:justify">
+                                            (*) Quý khách vui lòng có mặt tại bến xuất phát của xe trước ít nhất 30 phút giờ xe khởi hành, mang theo thông báo đã thanh toán vé thành công có chứa mã vé được gửi từ hệ thống WebProTicket. Vui lòng liên hệ Trung tâm tổng đài 1900 6067 để được hỗ trợ.
+                                            <br />
+                                            (*) Nếu quý khách có nhu cầu trung chuyển, vui lòng liên hệ Tổng đài trung chuyển 1900 6918 trước khi đặt vé. Chúng tôi không đón/trung chuyển tại những điểm xe trung chuyển không thể tới được.
+                                            </div>
+                                        </div>
+                                    </div>
+                                 <div class='d-flex align-items-center mt-5 submit-checkbox'>
+                                    <input type="checkbox" id="chapnhan" style="width:15px; height:15px" /><label class='text' for="chapnhan"><span class='ms-3' style="color:#E63946">Chấp nhận điều khoản   </span> đặt vé & chính sách bảo mật thông tin của WebProTicket </label>
+                                </div>
+
+                                   <!-- {/* -------------------------- NÚT BẤM TIẾP TỤC TRÊN MOBILE ĐỂ ĐẾN VỚI BƯỚC TIẾP THEO --------------------------*/} -->
+                                <div class='button_conti-step'>
+                                    <div class='d-flex justify-content-between mt-3 btn-handle'>
+                                        <button class='btn button_step' type='button' data-next='step2'>Quay lại</button>
+                                        <button  class='btn button_step' type='button' data-next='step4'>Tiếp tục</button>
+                                    </div>
+                                  </div>   
+                                   <!-- {/* ------------------------END --- NÚT BẤM TIẾP TỤC TRÊN MOBILE ĐỂ ĐẾN VỚI BƯỚC TIẾP THEO --------------------------*/} -->
+
+                                </div>
+                                <!-- {/* -----------------------END---- BƯỚC 3 NHẬP THÔNG TIN ĐẶT VÉ ---------------------------*/} -->
+                               
+                            </div>
+                          
+                        </div>
+
+                        <!-- {/* --------------------------- BƯỚC 4 HIỆN TỔNG QUÁT THÔNG TIN ĐẶT VÉ ---------------------------*/} -->
+                        <div class='col-4 infor-bus-contents  items-choose'  id='step4'>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                <h5 class="card-title text-start">Thông tin lượt đi</h5>
+                                <div class="row mt-3">
+                                    <div class="col text-start">Tuyến xe</div>
+                                    <div class="col text-end">BX Mien Dong =&gt; Da lat</div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col text-start">Thời gian</div>
+                                    <div class="col text-end text-danger">19:35 10-08-2023</div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col text-start">Số lượng ghế</div>
+                                    <div class="col text-end">4</div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col text-start">Số ghế</div>
+                                    <div class="col text-end text-danger">B10, B11, B14, B13</div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col text-start">Tổng tiền lượt đi</div>
+                                    <div class="col text-end text-danger">1.120.000đ</div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col mt-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                    <h5 class="card-title text-start">Chi tiết giá</h5>
+                                    <div class="row mt-3">
+                                        <div class="col text-start">Giá vé lượt đi</div>
+                                        <div class="col text-end text-danger">1.120.000đ</div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col text-start">Phí thanh toán</div>
+                                        <div class="col text-end">0đ</div>
+                                    </div>
+                                    <hr />
+                                    <div class="row mt-3">
+                                        <div class="col text-start">Tổng tiền</div>
+                                        <div class="col text-end text-danger">1.120.000đ</div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- {/* --------------------------- NÚT BẤM ĐẾN TRANG THANH  TOÁN --------------------------*/} -->
+
+                            <div class='col justify-content-between d-flex mt-4 btn-handle'>
+                                
+                                    <button class='btn'><a href="">Huỷ</a></button>
+                                    <button class='btn'><a href="thanhtoan1chieu.html">Thanh toán</a></button>
+                                
+                                
+
+                            </div>
+                            <!-- {/* ------------------------END --- NÚT BẤM ĐẾN TRANG THANH  TOÁN --------------------------*/} -->
+
+                        </div>
+                        <!-- {/* --------------------------- BƯỚC 4 HIỆN TỔNG QUÁT THÔNG TIN ĐẶT VÉ ---------------------------*/} -->
+
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </main>
+    <!-- ---------------------------------------------------END Main ------------------------------------------------>
+
+
+    <!-- --------------------------------------------------------- Footer-------------------------------------------------->
+    <footer>
+        <div class='footer-container '>
+            <div class='d-flex width-main-items justify-content-around w-100 pt-4 flex-wrap'>
+                <div class="w-20 ">
+                    <h5 class='text-center'>Liên hệ </h5>
+                    <div class="mt-4">
+                        <ul class='d-flex flex-column text-decoration-none list-style-none text-left '>
+                            <li class='list-group-item mb-2 '><a href="/">TRUNG TÂM TỔNG ĐÀI & CSKH: <br /><b
+                                        style="color:#2E8A99">0369540497</b> </a> </li>
+                            <li class='list-group-item mb-2'><a href="/">EMAIL: webproticket@gmail.com</a></li>
+                            <li class='list-group-item mb-2'><a href="/">ĐỊA CHỈ: Công viên phần mềm Quang QTSC Building
+                                    1, Trung, P Q.12, Thành phố Hồ Chí Minh</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="w-20 ">
+                    <h5 class='text-center'>Hỗ trợ </h5>
+                    <div class="mt-4">
+                        <ul class='d-flex flex-column text-decoration-none list-style-none text-left '>
+                            <li class='list-group-item mb-2 '><a href="/">Tra cứu thông tin đặt vé</a> </li>
+                            <li class='list-group-item mb-2'><a href="/">Điều khoản sử dụng</a></li>
+                            <li class='list-group-item mb-2'><a href="huongdandatve.html">Hướng dẫn đặt vé trên Web</a>
+                            </li>
+                            <li class='list-group-item mb-2'><a href="/">Câu hỏi thường gặp</a></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="w-20 ">
+                    <h5 class='text-center'>Kết nối chúng tôi </h5>
+                    <div class="iconband-header w-50 m-auto mt-4">
+                        <ul class='d-flex flex-row text-left p-0 w-100 justify-content-center'>
+                            <li class='mb-3 '><a href="/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                        <path
+                                            d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                                    </svg>
+
+                                </a> </li>
+                            <li class='mb-3 ms-2'><a href="/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                        <path
+                                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                                    </svg>
+                                </a></li>
+
+                            <li class='mb-3 ms-2'><a href="/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                                        <path
+                                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                    </svg></a></li>
+                        </ul>
+
+                    </div>
+                    <div class='text-center mt-3'>
+                        <img src="images/logoSaleNoti.png" alt="" style="width:220px" />
+                    </div>
+                </div>
+                <div class='w-20 text-center mt-1'>
+                    <div class='mt-5'><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4435924064937!2d106.62525347481906!3d10.85382635776171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752bee0b0ef9e5%3A0x5b4da59e47aa97a8!2zQ8O0bmcgVmnDqm4gUGjhuqduIE3hu4FtIFF1YW5nIFRydW5n!5e0!3m2!1svi!2s!4v1692587002416!5m2!1svi!2s"
+                            style=" border: 0;width:100%;height:100%" allowFullScreen="" loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class='bot-footer width-main-items'>
+                @Copyright © 2023 WebProTicket
+            </div>
+        </div>
+    </footer>
+    <!-- ---------------------------------------------------END Footer--------------------------------------------------->
+
+</body>
+
+<script src="js/datve.js"></script>
+</html>

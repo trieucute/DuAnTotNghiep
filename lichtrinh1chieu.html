@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/searchBus.css">
+</head>
+
+<body class="app">
+    <!-- ---------------------------------------------------Header ------------------------------------------------>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0 0">
+            <div class="container-fluid navbar-header width-header align-items-center flex-wrap">
+                <a class="navbar-brand" href="/">
+                    <img src="/images/logo.png" alt="" style="width: 100%; object-fit: cover" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- {/* <span class="navbar-toggler-icon" /> */} -->
+                    <svg class="navbar-toggler-icon" xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 448 512" style="fill: #ffffff">
+                        <path
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                </button>
+                <div class="midTop-header align-items-center" style="width: 67%">
+                    <ul class="navbar-nav d-flex justify-content-between align-items-center" style="height: 100%">
+                        <li class="nav-item icon-header">
+                            <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span style="padding-right: 20px;">Công viên phần mềm Quang QTSC Building 1</span>
+                        </li>
+                        <li class="nav-item icon-header">
+                            <span class="icon"><i class="fa-solid fa-phone-volume"></i></span>
+                            <span>HotLine: 0369540397</span>
+                        </li>
+                        <li class="nav-item iconband-header">
+                            <ul class="navbar-nav d-flex justify-content-between">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                        <path
+                                            d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                        <path
+                                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                                        <path
+                                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="width-header menu collapse navbar-collapse show" id="navbarSupportedContent"
+                    style="margin-top: 10px; z-index: 100">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Trang chủ</a>
+                            <!-- <NavLink  style={navLinkStyle}  class="nav-link" to="/">Trang chủ</NavLink> -->
+                        </li>
+                        <li class="nav-item">
+                            <a href="thuexe.html" class="nav-link">Thuê xe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="gioithieu.html" class="nav-link">Giới Thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="lienhe.html" class="nav-link">Liên hệ</a>
+                        </li>
+                        <li class="nav-item">
+                              <a href="tuyendung.html" class="nav-link">Tuyển dụng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="tintuc.html" class="nav-link">Tin tức</a>
+                        </li>
+                    </ul>
+                    <div class="login-button">
+                <a href="dangnhap.html" type="button" class="btn button btn-login" style="  padding: 5px 5px; width: 175px;">
+              <i class="fa-solid fa-user" style="margin-right: 10px"></i>
+              <span> Đăng nhập</span>
+            </a>
+          </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ---------------------------------------------------END  Header ------------------------------------------------>
+
+
+    <!-- ---------------------------------------------------Main ------------------------------------------------>
+    <main class='mt-10'>
+        <div class="width-main search-results">
+            <!-- --------------Banner ------------->
+            <div class="banner">
+                <!-- <img src="images/banner.webp" alt="" /> -->
+                <div id="carouselExampleIndicators" class="carousel carousel-banner slide" data-bs-ride="carousel">
+        
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/banner.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/banner2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/banner4.jpg" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="" aria-hidden="true"><i class="fas fa-caret-left"></i></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="" aria-hidden="true"><i class="fas fa-caret-right"></i></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+        
+              </div>
+            <!-- -------------END  Banner ------------->
+
+            <!---------Chọn địa điểm đi -> về  - booking ----------->
+            <div class='book-content_container'>
+                <div class="book-contents">
+                    <div class="booking-content">
+                        <div class="trip-book">
+                            <div class="form-check">
+                                <input class="form-input" type="radio" name="trip" id="motchieu" value="motchieu"
+                                    checked="checked" onchange="handleCheckedKhuHoi()" />
+                                <label class="form-check-label" for="motchieu">
+                                    Một chiều
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-input" type="radio" name="trip" id="khuhoi" value="khuhoi"
+                                    onchange="handleCheckedKhuHoi()" />
+                                <label class="form-check-label" for="khuhoi">
+                                    Khứ hồi
+                                </label>
+                            </div>
+                        </div>
+                        <div class="book-ticket">
+                            <form class="form-book-ticket flex-wrap">
+                                <div class="form-group ">
+                                    <label for="departure">Điểm đi</label>
+
+                                    <select class="form-control " name="city" id="citySelect1">
+                                        <option value="">Chọn tỉnh thành</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="destination">Điểm đến</label>
+
+                                    <select class="form-control city" name="city" id="citySelect2">
+                                        <option value="">Chọn tỉnh thành</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="date_go">Ngày đi</label>
+                                    <input type="date" class="form-control" id="date_go" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="date_go">Ngày về</label>
+                                    <input type="date" class="form-control disabled_input disabled" id="date_go" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="sl_ve">Số vé</label>
+                                    <input type="number" class="form-control">
+
+                                </div>
+
+
+                            </form>
+                            <div class="button_search_ticket">
+                                <button type="button" class="btn ">
+                                  Tìm chuyến xe
+                                </button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-------END  Chọn địa điểm đi -> về  - booking ------->
+
+            <!-------Button Filter mobile ------->
+            <button class="filter-toggler mt-5" type="button" id="filter-toggler">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" style="fill:#ffffff">
+                    <path
+                        d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z" />
+                </svg>
+
+            </button>
+            <!-------END  Button Filter mobile ------->
+
+            <!--------Bộ lộc và Kết quả tìm kiếm chuyến xe -  Search Filter and Search Bus Routers------->
+            <div class="search-bus-routers container mt pt-4 width-main-items">
+                <div class="content-search-bookTicket row justify-content-center">
+                    <!--------Bộ lộc tìm kiếm -  Search Filter ------->
+                    <div class="search-filters title_home_bus me-4 col-sm">
+                        <div class="background"></div>
+                        <div class="contents-items-filter">
+                            <div class="text-end close-filter">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"
+                                    style="fill:#ccd2db">
+                                    <path
+                                        d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z" />
+                                </svg>
+
+                            </div>
+                            <div class="w-100 border-right">
+                                <h1>BỘ LỌC TÌM KIẾM</h1>
+                                <div class="times-go w-85 mt-4 ps-2">
+                                    <h5 class="pb-2">Giờ đi</h5>
+                                    <ul class="ps-2">
+                                        <li class="d-flex align-items-center pb-2"><input type="checkbox" id="sangsom"/>
+                                    <label class="form-check-label ps-2" for="sangsom">Sáng sớm (00:00 - 06:00)</label>
+                                            </li>
+                                        <li class="d-flex align-items-center pb-2"><input type="checkbox" id="buoisang"/>
+                                            <label class="form-check-label ps-2" for="buoisang">Buổi sáng (06:00 - 12:00)</label>
+                                            </li>
+                                        <li class="d-flex align-items-center pb-2"><input type="checkbox" id="buoichieu"/>
+                                            <label class="form-check-label ps-2" for="buoichieu">Buổi chiều (12:00 - 18:00)</label>
+                                            </li>
+                                        <li class="d-flex align-items-center pb-2"><input type="checkbox" id="buoitoi"/>
+                                            <label class="form-check-label ps-2" for="buoitoi">Buổi tối (18:00 - 24:00)</label>
+                                            </li>
+                                    </ul>
+                                    <hr />
+                                </div>
+                                <div class="floor w-85 ps-2 mt-4 ">
+                                    <h5 class="pb-2">Tầng </h5>
+                                    <div class="ps-2 mb-4 d-flex">
+                                        <input type="checkbox" id="floorUp" hidden class="floorInputUp" />
+                                            <label class="form-check-label btn-floor" for="floorUp">Tầng trên</label>
+
+                                        <input type="checkbox" id="floorDown"   hidden class="floorInputDown" />
+                                            <label class="form-check-label btn-floor" for="floorDown">Tầng dưới</label>
+                                    </div>
+                                    <hr />
+                                </div>
+                                <div class="chair w-85 ps-2 mt-4">
+                                    <h5 class="pb-2">Loại giường / ghế </h5>
+                                    <ul class="ps-2 mb-4">
+                                        <li class="d-flex align-items-center pb-2">
+                                            <input type="checkbox" id="Limousine"/>
+                                            <label class="form-check-label ps-2" for="Limousine">Limousine</label>
+                                            </li>
+                                        <li class="d-flex align-items-center pb-2">
+                                            <input type="checkbox" id="ghenam"/>
+                                            <label class="form-check-label ps-2" for="ghenam">Ghế nằm</label></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--------END  Bộ lộc tìm kiếm -  Search Filter ------->
+
+                    <!----------- Kết quả tìm kiếm -   Search Bus Routers-------->
+                    <div class="results-search title_home_bus px-3 col-md-8">
+                        <div>
+                            <div class="fixed-mobile-results" id="fixed-mobile-results">
+                                <!-- title bus search and number routers-->       
+                                <h1>TP. Hồ Chí Minh - Đà Lạt (10)</h1>         
+                                
+                                
+                                </ul>
+                            </div>
+
+
+                            <!-- {/* --------------------------------chuyến đi --------------------------*/} -->
+                            <div class="items-results-search active mt-4" id="go">
+                                <!-- item1 -->
+                                <div class="item-results-bus d-flex mb-4 flex-colum flex-wrap w-100">
+                                    <div class="d-flex mb-2 flex-row w-100">
+                                        <span class="time_go">00:00</span>
+                                        <div class="d-flex align-items-center travel">
+                                            <span class="icon-dot">
+                                                <i class="fa-solid fa-circle"></i>
+                                            </span>
+                                            <div class=" border-b-2 border-dotted mr-2"></div>
+                                            <div class="text-center travel_time">8 giờ</div>
+
+                                            <div class=" border-b-2 border-dotted ml-2"></div>
+                                            <span class="icon-dotArrive">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                            </span>
+                                        </div>
+                                        <span class="time_arrive">08:00</span>
+                                    </div>
+                                    <div class="items-bus-station d-flex w-100">
+                                        <h5 class="w-50 ">Bến xe Miền Đông mới</h5>
+                                        <h5 class="w-50 text-end">Bến Xe Đà Lạt</h5>
+                                    </div>
+                                    <div class="d-flex w-100 mt-2 align-items-center">
+                                        <div class="item-about-bus w-75">
+                                            <ul class="d-flex p-0 w-100 m-0">
+                                                <li class="list-group-item ">280.000đ</li>
+                                                <li class="list-group-item ">
+                                                    <span class="icon-dot ps-4">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                    </span>
+                                                    <span class="ps-4">Limousine</span>
+                                                </li>
+                                                <li class="list-group-item ">
+                                                    <span class="icon-dot ps-4">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                    </span>
+                                                    <span class="ps-4"> 22 chỗ trống</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-choose w-25 text-end">
+                                            <button class=""><a href="datve1chieu.html">Chọn chuyến</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- {/* item2 */} -->
+                                <div class="item-results-bus d-flex mb-4 flex-colum flex-wrap w-100">
+                                    <div class="d-flex mb-2 flex-row w-100">
+                                        <span class="time_go">00:00</span>
+                                        <div class="d-flex align-items-center travel">
+                                            <span class="icon-dot">
+                                                <i class="fa-solid fa-circle"></i>
+                                            </span>
+                                            <div class=" border-b-2 border-dotted mr-2"></div>
+                                            <div class="text-center travel_time">8 giờ</div>
+
+                                            <div class=" border-b-2 border-dotted ml-2"></div>
+                                            <span class="icon-dotArrive">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                            </span>
+                                        </div>
+                                        <span class="time_arrive">08:00</span>
+                                    </div>
+                                    <div class="items-bus-station d-flex w-100">
+                                        <h5 class="w-50 ">Bến xe Miền Đông mới</h5>
+                                        <h5 class="w-50 text-end">Bến Xe Đà Lạt</h5>
+                                    </div>
+                                    <div class="d-flex w-100 mt-2 align-items-center">
+                                        <div class="item-about-bus w-75">
+                                            <ul class="d-flex p-0 w-100 m-0">
+                                                <li class="list-group-item ">280.000đ</li>
+                                                <li class="list-group-item ">
+                                                    <span class="icon-dot ps-4">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                    </span>
+                                                    <span class="ps-4">Limousine</span>
+                                                </li>
+                                                <li class="list-group-item ">
+                                                    <span class="icon-dot ps-4">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                    </span>
+                                                    <span class="ps-4"> 22 chỗ trống</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-choose w-25 text-end">
+                                            <button class=""><a href="datve1chieu.html">Chọn chuyến</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- {/* item3 */} -->
+                                <div class="item-results-bus d-flex mb-4 flex-colum flex-wrap w-100">
+                                    <div class="d-flex mb-2 flex-row w-100">
+                                        <span class="time_go">00:00</span>
+                                        <div class="d-flex align-items-center travel">
+                                            <span class="icon-dot">
+                                                <i class="fa-solid fa-circle"></i>
+                                            </span>
+                                            <div class=" border-b-2 border-dotted mr-2"></div>
+                                            <div class="text-center travel_time">8 giờ</div>
+
+                                            <div class=" border-b-2 border-dotted ml-2"></div>
+                                            <span class="icon-dotArrive">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                            </span>
+                                        </div>
+                                        <span class="time_arrive">08:00</span>
+                                    </div>
+                                    <div class="items-bus-station d-flex w-100">
+                                        <h5 class="w-50 ">Bến xe Miền Đông mới</h5>
+                                        <h5 class="w-50 text-end">Bến Xe Đà Lạt</h5>
+                                    </div>
+                                    <div class="d-flex w-100 mt-2 align-items-center">
+                                        <div class="item-about-bus w-75">
+                                            <ul class="d-flex p-0 w-100 m-0">
+                                                <li class="list-group-item ">280.000đ</li>
+                                                <li class="list-group-item ">
+                                                    <span class="icon-dot ps-4">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                    </span>
+                                                    <span class="ps-4">Limousine</span>
+                                                </li>
+                                                <li class="list-group-item ">
+                                                    <span class="icon-dot ps-4">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                    </span>
+                                                    <span class="ps-4"> 22 chỗ trống</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-choose w-25 text-end">
+                                            <button class=""><a href="datve1chieu.html">Chọn chuyến</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- {/* item4 */} -->
+                                <div class="item-results-bus d-flex mb-4 flex-colum flex-wrap w-100">
+                                    <div class="d-flex mb-2 flex-row w-100">
+                                        <span class="time_go">00:00</span>
+                                        <div class="d-flex align-items-center travel">
+                                            <span class="icon-dot">
+                                                <i class="fa-solid fa-circle"></i>
+                                            </span>
+                                            <div class=" border-b-2 border-dotted mr-2"></div>
+                                            <div class="text-center travel_time">8 giờ</div>
+
+                                            <div class=" border-b-2 border-dotted ml-2"></div>
+                                            <span class="icon-dotArrive">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                            </span>
+                                        </div>
+                                        <span class="time_arrive">08:00</span>
+                                    </div>
+                                    <div class="items-bus-station d-flex w-100">
+                                        <h5 class="w-50 ">Bến xe Miền Đông mới</h5>
+                                        <h5 class="w-50 text-end">Bến Xe Đà Lạt</h5>
+                                    </div>
+                                    <div class="d-flex w-100 mt-2 align-items-center">
+                                        <div class="item-about-bus w-75">
+                                            <ul class="d-flex p-0 w-100 m-0">
+                                                <li class="list-group-item ">280.000đ</li>
+                                                <li class="list-group-item ">
+                                                    <span class="icon-dot ps-4">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                    </span>
+                                                    <span class="ps-4">Limousine</span>
+                                                </li>
+                                                <li class="list-group-item ">
+                                                    <span class="icon-dot ps-4">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                    </span>
+                                                    <span class="ps-4"> 22 chỗ trống</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-choose w-25 text-end">
+                                            <button class=""><a href="datve1chieu.html">Chọn chuyến</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- {/* item5 */} -->
+                                <div class="item-results-bus d-flex mb-4 flex-colum flex-wrap w-100">
+                                    <div class="d-flex mb-2 flex-row w-100">
+                                        <span class="time_go">00:00</span>
+                                        <div class="d-flex align-items-center travel">
+                                            <span class="icon-dot">
+                                                <i class="fa-solid fa-circle"></i>
+                                            </span>
+                                            <div class=" border-b-2 border-dotted mr-2"></div>
+                                            <div class="text-center travel_time">8 giờ</div>
+
+                                            <div class=" border-b-2 border-dotted ml-2"></div>
+                                            <span class="icon-dotArrive">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                            </span>
+                                        </div>
+                                        <span class="time_arrive">08:00</span>
+                                    </div>
+                                    <div class="items-bus-station d-flex w-100">
+                                        <h5 class="w-50 ">Bến xe Miền Đông mới</h5>
+                                        <h5 class="w-50 text-end">Bến Xe Đà Lạt</h5>
+                                    </div>
+                                    <div class="d-flex w-100 mt-2 align-items-center">
+                                        <div class="item-about-bus w-75">
+                                            <ul class="d-flex p-0 w-100 m-0">
+                                                <li class="list-group-item ">280.000đ</li>
+                                                <li class="list-group-item ">
+                                                    <span class="icon-dot ps-4">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                    </span>
+                                                    <span class="ps-4">Limousine</span>
+                                                </li>
+                                                <li class="list-group-item ">
+                                                    <span class="icon-dot ps-4">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                    </span>
+                                                    <span class="ps-4"> 22 chỗ trống</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-choose w-25 text-end">
+                                            <button class=""><a href="datve1chieu.html">Chọn chuyến</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- {/* item6 */} -->
+                                <div class="item-results-bus d-flex mb-4 flex-colum flex-wrap w-100">
+                                    <div class="d-flex mb-2 flex-row w-100">
+                                        <span class="time_go">00:00</span>
+                                        <div class="d-flex align-items-center travel">
+                                            <span class="icon-dot">
+                                                <i class="fa-solid fa-circle"></i>
+                                            </span>
+                                            <div class=" border-b-2 border-dotted mr-2"></div>
+                                            <div class="text-center travel_time">8 giờ</div>
+
+                                            <div class=" border-b-2 border-dotted ml-2"></div>
+                                            <span class="icon-dotArrive">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                            </span>
+                                        </div>
+                                        <span class="time_arrive">08:00</span>
+                                    </div>
+                                    <div class="items-bus-station d-flex w-100">
+                                        <h5 class="w-50 ">Bến xe Miền Đông mới</h5>
+                                        <h5 class="w-50 text-end">Bến Xe Đà Lạt</h5>
+                                    </div>
+                                    <div class="d-flex w-100 mt-2 align-items-center">
+                                        <div class="item-about-bus w-75">
+                                            <ul class="d-flex p-0 w-100 m-0">
+                                                <li class="list-group-item ">280.000đ</li>
+                                                <li class="list-group-item ">
+                                                    <span class="icon-dot ps-4">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                    </span>
+                                                    <span class="ps-4">Limousine</span>
+                                                </li>
+                                                <li class="list-group-item ">
+                                                    <span class="icon-dot ps-4">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                    </span>
+                                                    <span class="ps-4"> 22 chỗ trống</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-choose w-25 text-end">
+                                            <button class=""><a href="datve1chieu.html">Chọn chuyến</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- {/* item7 */} -->
+                                <div class="item-results-bus d-flex mb-4 flex-colum flex-wrap w-100">
+                                    <div class="d-flex mb-2 flex-row w-100">
+                                        <span class="time_go">00:00</span>
+                                        <div class="d-flex align-items-center travel">
+                                            <span class="icon-dot">
+                                                <i class="fa-solid fa-circle"></i>
+                                            </span>
+                                            <div class=" border-b-2 border-dotted mr-2"></div>
+                                            <div class="text-center travel_time">8 giờ</div>
+
+                                            <div class=" border-b-2 border-dotted ml-2"></div>
+                                            <span class="icon-dotArrive">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                            </span>
+                                        </div>
+                                        <span class="time_arrive">08:00</span>
+                                    </div>
+                                    <div class="items-bus-station d-flex w-100">
+                                        <h5 class="w-50 ">Bến xe Miền Đông mới</h5>
+                                        <h5 class="w-50 text-end">Bến Xe Đà Lạt</h5>
+                                    </div>
+                                    <div class="d-flex w-100 mt-2 align-items-center">
+                                        <div class="item-about-bus w-75">
+                                            <ul class="d-flex p-0 w-100 m-0">
+                                                <li class="list-group-item ">280.000đ</li>
+                                                <li class="list-group-item ">
+                                                    <span class="icon-dot ps-4">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                    </span>
+                                                    <span class="ps-4">Limousine</span>
+                                                </li>
+                                                <li class="list-group-item ">
+                                                    <span class="icon-dot ps-4">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                    </span>
+                                                    <span class="ps-4"> 22 chỗ trống</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-choose w-25 text-end">
+                                            <button class=""><a href="datve1chieu.html">Chọn chuyến</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- {/*END  item7 */} -->
+
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <!----------- END  Kết quả tìm kiếm -   Search Bus Routers-------->
+
+                </div>
+            </div>
+            <!--------Kết quả tìm kiếm chuyến xe -  Search Bus Routers------->
+
+        </div>
+    </main>
+    <!-- ---------------------------------------------------END Main ------------------------------------------------>
+
+
+    <!-- --------------------------------------------------------- Footer-------------------------------------------------->
+    <footer>
+        <div class='footer-container '>
+            <div class='d-flex width-main-items justify-content-around w-100 pt-4 flex-wrap'>
+                <div class="w-20 ">
+                    <h5 class='text-center'>Liên hệ </h5>
+                    <div class="mt-4">
+                        <ul class='d-flex flex-column text-decoration-none list-style-none text-left '>
+                            <li class='list-group-item mb-2 '><a href="/">TRUNG TÂM TỔNG ĐÀI & CSKH: <br /><b
+                                        style="color:#2E8A99">0369540497</b> </a> </li>
+                            <li class='list-group-item mb-2'><a href="/">EMAIL: webproticket@gmail.com</a></li>
+                            <li class='list-group-item mb-2'><a href="/">ĐỊA CHỈ: Công viên phần mềm Quang QTSC Building
+                                    1, Trung, P Q.12, Thành phố Hồ Chí Minh</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="w-20 ">
+                    <h5 class='text-center'>Hỗ trợ </h5>
+                    <div class="mt-4">
+                        <ul class='d-flex flex-column text-decoration-none list-style-none text-left '>
+                            <li class='list-group-item mb-2 '><a href="/">Tra cứu thông tin đặt vé</a> </li>
+                            <li class='list-group-item mb-2'><a href="/">Điều khoản sử dụng</a></li>
+                            <li class='list-group-item mb-2'><a href="huongdandatve.html">Hướng dẫn đặt vé trên Web</a>
+                            </li>
+                            <li class='list-group-item mb-2'><a href="/">Câu hỏi thường gặp</a></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="w-20 ">
+                    <h5 class='text-center'>Kết nối chúng tôi </h5>
+                    <div class="iconband-header w-50 m-auto mt-4">
+                        <ul class='d-flex flex-row text-left p-0 w-100 justify-content-center'>
+                            <li class='mb-3 '><a href="/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                        <path
+                                            d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                                    </svg>
+
+                                </a> </li>
+                            <li class='mb-3 ms-2'><a href="/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                        <path
+                                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                                    </svg>
+                                </a></li>
+
+                            <li class='mb-3 ms-2'><a href="/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                                        <path
+                                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                    </svg></a></li>
+                        </ul>
+
+                    </div>
+                    <div class='text-center mt-3'>
+                        <img src="images/logoSaleNoti.png" alt="" style="width:220px" />
+                    </div>
+                </div>
+                <div class='w-20 text-center mt-1'>
+                    <div class='mt-5'><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4435924064937!2d106.62525347481906!3d10.85382635776171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752bee0b0ef9e5%3A0x5b4da59e47aa97a8!2zQ8O0bmcgVmnDqm4gUGjhuqduIE3hu4FtIFF1YW5nIFRydW5n!5e0!3m2!1svi!2s!4v1692587002416!5m2!1svi!2s"
+                            style=" border: 0;width:100%;height:100%" allowFullScreen="" loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class='bot-footer width-main-items'>
+                @Copyright © 2023 WebProTicket
+            </div>
+        </div>
+    </footer>
+    <!-- ---------------------------------------------------END Footer--------------------------------------------------->
+
+</body>
+<script src="js/booking.js"></script>
+<script src="js/lichtrinh.js"></script>
+</html>

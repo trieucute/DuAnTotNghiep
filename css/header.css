@@ -1,0 +1,231 @@
+@import url(./global.css);
+.navbar {
+  /* max-height: 124px; */
+  align-items: stretch !important;
+  flex-direction: column !important;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+
+  z-index: 100;
+  background-color: var(--colorMain) !important;
+}
+.width-header {
+  width: 95%;
+  margin: 0 auto;
+}
+.navbar-header {
+  align-items: stretch !important;
+}
+.navbar-toggler {
+  border: none;
+}
+.midTop-header {
+  width: 70%;
+  font-size: 16px;
+}
+.navbar-brand {
+  height: 70px;
+  list-style: none;
+}
+.icon-header {
+  display: flex;
+  align-items: center;
+  font-family: var(--fontBold);
+}
+.icon-header .icon {
+  margin-right: 18px;
+}
+.iconband-header {
+  width: 15%;
+}
+.iconband-header li {
+  font-size: 26px;
+  background-color: white;
+  padding: 0 8px;
+  border-radius: 100%;
+}
+.iconband-header li svg {
+  margin-bottom: 7px;
+}
+.nav-item .icon {
+  font-size: 25px;
+}
+.menu {
+  background-color: var(--colorMain);
+}
+.menu .navbar-nav .nav-item {
+  margin: 0 20px 0 0;
+  font-family: var(--fontExtraBold);
+}
+.nav-item .nav-link {
+  font-size: 17px;
+  color: white;
+  margin: 0 10px;
+}
+
+.nav-item .nav-link.active {
+  position: relative;
+  color: white;
+}
+.nav-item .nav-link.active::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+
+  background-color: var(--colorRed);
+}
+.login-button .btn-login {
+  border-radius: 20px;
+  border: none;
+  padding: 5px 18px;
+  color: white;
+
+  background-color: var(--colorGreen);
+  font-size: 18px;
+}
+.login-button .btn-login span {
+  font-size: 15px;
+  font-family: var(--fontExtraBold);
+}
+
+/* -----------responsive------------ */
+@media only screen and (max-width: 320px) {
+  .midTop-header {
+    display: none;
+  }
+  .navbar-brand {
+    width: 40%;
+    padding: 0 0;
+    height: 70px;
+  }
+  .navbar-brand img {
+    max-height: 70px;
+  }
+  .menu .login-button .btn-login{
+    margin-bottom: 10px ;
+  }
+  .menu .nav-item .nav-link {
+    font-size: 13px;
+  }
+}
+/* 	Màn hình chiều dọc cho smartphone nhỏ (VD iPhone 5)*/
+@media only screen and (min-width: 320px) {
+  .midTop-header {
+    display: none;
+  }
+  .navbar-brand {
+    width: 40%;
+    padding: 0 0;
+    height: 70px;
+  }
+  .navbar-brand img {
+    max-height: 70px;
+  }
+  .menu .login-button .btn-login{
+    margin-bottom: 10px ;
+  }
+  .menu .nav-item .nav-link {
+    font-size: 13px;
+  }
+}
+/* Màn hình chiều ngang cho smartphone nhỏ */
+@media only screen and (min-width: 480px) {
+  .midTop-header {
+    display: none;
+  }
+  .navbar-brand {
+    width: 30%;
+    padding: 0 0;
+    height: 70px;
+  }
+  .navbar-brand img {
+    max-height: 70px;
+  }
+  .menu .login-button .btn-login{
+    margin-bottom: 10px ;
+  }
+  .menu .nav-item .nav-link {
+    font-size: 14px;
+  }
+}
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .midTop-header {
+    display: none;
+  }
+ 
+  .navbar-brand {
+    width: 23%;
+    padding: 0 0;
+    height: 70px;
+  }
+  .navbar-brand img {
+    max-height: 70px;
+  }
+  .menu .login-button .btn-login{
+    margin-bottom: 10px ;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+  /* .menu .navbar-nav {
+        width: 100%;
+    } */
+  .navbar-brand {
+    width: 20%;
+    padding: 0 0;
+    height: 70px;
+  }
+  .navbar-brand img {
+    max-height: 70px;
+  }
+  .midTop-header {
+    display: block;
+  }
+  .midTop-header  {
+    font-size: 15px;
+}
+
+  .menu {
+    width: 50%;
+  }
+  .menu .nav-item .nav-link {
+    font-size: 14.5px;
+  }
+  .menu .login-button .btn-login{
+    margin:0 0;
+  }
+}
+
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .navbar {
+        max-height: 124px;
+    }
+  .menu .nav-item .nav-link {
+    font-size: 17px;
+  }
+  .navbar-brand {
+    width: 16%;
+    padding-top: 5px;
+    object-fit: cover;
+  }
+  .navbar-brand img {
+    max-height: 74px;
+  }
+  .midTop-header  {
+    font-size: 16px;
+}
+.menu .login-button .btn-login{
+    margin:0 0;
+  }
+}

@@ -1,0 +1,59 @@
+.introduce-contents .banner2{
+    max-height: 550px;
+    
+}
+.introduce-contents .banner-intro{
+    max-height:515px;
+    margin-bottom: 30px;
+}
+.introduce-contents .banner-intro img{
+    max-height:515px;
+    width: 100%;
+    object-fit: cover;
+}
+.introduce-contents .lh-base{
+    font-family: var(--fontRegular);
+    font-size: 18px;
+}
+.introduce-contents .infor-text2{
+    max-width: 70%;
+    margin: 0 auto;
+    font-family: var(--fontRegular);
+    font-size: 18px;
+}
+@media only screen and (max-width: 480px){
+    .introduce-contents .img-fluid:nth-child(1){
+        min-height: 9em !important;
+    }
+    .introduce-contents .banner2{
+         max-height: 15em !important;
+    }
+    .introduce-contents .lh-base{
+        font-size: 16px;
+        padding: 0 0 !important;
+    }
+    .introduce-contents .infor-text2{
+        max-width: 100%;
+
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .introduce-contents .img-fluid:nth-child(1){
+        max-height: 21em;
+    }
+    .introduce-contents .banner2{
+        max-height: 21em  ;
+    }
+    .introduce-contents .infor-text2 {
+        max-width: 90%;
+    }
+}
+@media only screen and (min-width: 1200px){
+    /* .introduce-contents .img-fluid:nth-child(1){
+        max-height: 25em;
+    } */
+    /* .introduce-contents .banner2{
+        max-height: 27em;
+    } */
+}

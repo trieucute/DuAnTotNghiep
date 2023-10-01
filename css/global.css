@@ -1,0 +1,24 @@
+@font-face {
+    font-family: openSansRegular;
+    src: url(../fonts/OpenSans-Regular.ttf);
+  }
+  @font-face {
+    font-family: openSansBold;
+    src: url(../fonts/OpenSans-Bold.ttf);
+  }
+  @font-face {
+    font-family: openSansExtraBold;
+    src: url(../fonts/OpenSans-ExtraBold.ttf);
+  }
+
+  :root {
+    --colorMain: #2E8A99;
+    --colorFont:#0E2954;
+    --colorRed:#E63946;
+    --colorGreen:#84A7A1;
+    --fontBold:openSansBold;
+    --fontRegular:openSansRegular;
+    --fontExtraBold:openSansExtraBold;
+
+
+}

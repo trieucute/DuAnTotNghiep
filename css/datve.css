@@ -1,0 +1,283 @@
+@import url(./global.css);
+
+.routes-bus-container h5{
+    font-size:22px ;
+    font-family: var(--fontExtraBold);
+    color: var(--colorFont);
+}
+.form-group .form-control{
+    border: 1px solid #AAAAAA;
+}
+.routes-bus-container .date_go{
+    font-size:20px ;
+    font-family: var(--fontBold);
+
+}
+.contents-items-choose .items-FloorDown .row,  .contents-items-choose .items-FloorUp .row{
+    width: 90%;
+    margin: 0 auto;
+}
+.contents-items-choose h5{
+    font-family: var(--fontBold);
+    color: var(--colorFont);
+    font-size: 1.2em;
+}
+.contents-items-choose {
+    font-family: var(--fontRegular);
+}
+
+.contents-items-choose h6{
+    font-family: var(--fontBold);
+    color: var(--colorMain);
+    font-size: 0.8em;
+}
+.contents-items-choose > .row >.col-md-8{
+    padding: 1em 2em;
+
+}
+.items-Floor-des{
+    font-size: 0.8em;
+}
+.contents-items-choose .form-group label{
+    font-size: 1em;
+    font-family: var(--fontBold);
+    color: var(--colorFont);
+}
+.contents-items-choose .items-contents .border-bt{
+    border-bottom: 1px solid #C5C1C1;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.contents-items-choose .pickUp-dropOff-location-contents .form-group{
+    width: 50%;
+}
+.contents-items-choose .pickUp-dropOff-location-contents .form-group .form-control{
+    width: 90%;
+}
+.Client-information-contents .form-control{
+    width: 90%;
+}
+.btn-handle{
+    font-family: var(--fontBold);
+    font-size: 1em;
+}
+.btn-handle .btn:first-child a{
+    text-decoration: none;
+    color: var(--colorRed);
+
+}
+.btn-handle .btn a{
+    text-decoration: none;
+    color: white;
+
+}
+.btn-handle .btn:last-child{
+    background-color: var(--colorRed);
+    color: white;
+    font-size: 0.9em;
+    padding: 5px 25px;
+}
+.btn-handle .btn:first-child{
+    background-color: white;
+    color: var(--colorRed);
+    padding: 5px 40px;
+    font-size: 0.9em;
+    border: 1px solid #C5C1C1;
+}
+.items-terms-notes h5{
+    color: var(--colorRed);
+}
+.infor_bus_router{
+    width: 60%;
+    background-color: white;
+    z-index: 10;
+    top: 5%;
+    display: none;
+    left: 37%;
+    border-radius: 10px;
+    border: 1px solid #C5C1C1;
+    max-height: 500px;
+}
+.infor_bus_router.active-busInfor{
+    display: block;
+
+}
+.infor_bus_router .row{
+    max-height: 430px;
+
+}
+.infor_bus_router .row .items_infor_bus_router ul li{
+    text-align: justify;
+    font-size: 0.9em;
+    font-family: var(--fontRegular);
+}
+.steps-booking-contents{
+      background-color: var(--colorMain);
+      /* position: fixed; */
+      display: none;
+}
+.steps-booking-contents .tabs-step{
+    background-color: var(--colorMain);
+    color: white;
+    border-radius: 100%;
+
+}
+
+.steps-booking-contents .number-step{
+   left: 6px;
+   position: absolute;
+   color: white;
+    
+}
+.steps-booking-contents .border-step{
+    border-bottom: 1px solid #C5C1C1;
+}
+.contents-items-choose .chair-chosen{
+    display: none;
+}
+.button_conti-step {
+    margin-top: 2.5em;
+    display:none ;
+}
+.steps-booking-contents{
+    font-size: 0.9em;
+    font-family: var(--fontBold);
+}
+.steps-booking-contents .tabs-step{
+    padding: 0 2px;
+}
+.steps-booking-contents .active-step svg circle {
+    fill: var(--colorRed);
+}
+@media only screen and (max-width:340px) {
+    .steps-booking-contents {
+        font-size: 0.7em;
+    }
+    .steps-booking-contents .number-step {
+        left: 7px;
+        top: 0;
+    }
+}
+@media only screen and (max-width:560px) {
+    .routes-bus-container .w-25 img{
+        width: 100% !important;
+    }
+    .routes-bus-container h5 {
+        font-size: 1.1em;
+     
+    }
+    .routes-bus-container .date_go {
+        font-size: 0.9em;
+        
+    }
+   
+    .contents-items-choose > .row >.col-md-8 {
+        padding: 1em 0.5em;
+    }
+    .contents-items-choose .items-chair {
+        margin-top: 1.5em !important;
+    }
+    .contents-items-choose .infor-bus-contents{
+        padding: 0 0;
+    }
+    .steps-booking-contents .tabs-step{
+        padding: 0 5px;
+    }
+    .items-FloorUp{
+        margin-top: 1em;
+    }
+    .submit-checkbox .text{
+        font-size: 0.9em;
+    }
+    .items-terms-notes h5 {
+        font-size: 1em;
+    }
+    .items-terms-notes .mt-4{
+        margin-top: 1em !important;
+        font-size: 0.9em;
+    }
+    .infor_bus_router {
+        width: 80%;
+        top: 6%;
+        left: 16%;
+    }
+}
+@media only screen and (max-width:768px) {
+    .routes-bus-container{
+        position: fixed;
+        background-color: white;
+        z-index: 10;
+        left: 0;
+        width: 100%;
+        top: 4.4em;
+    }
+    .button_conti-step{
+        display: block;
+    }
+    .steps-booking-contents{
+        display: block;
+        
+  }
+
+  .contents-items-choose .items-choose{
+    display: none;
+  }
+  .contents-items-choose .items-choose.active-step-item{
+   
+    display: block;
+  }
+  .border-bt{
+    display: none;
+  }
+  .contents-items-choose{
+    margin-top: 12em;
+  }
+  .contents-items-choose > .row >.col-md-8{
+    border: none;
+  }
+  .contents-items-choose .pickUp-dropOff-location-contents .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contents-items-choose .pickUp-dropOff-location-contents .form-group .form-control {
+    width: 100%;
+}
+.contents-items-choose .items-chair{
+    margin-top: 1em;
+}
+.contents-items-choose .chair-chosen{
+    display: block;
+}
+  .Client-information-contents .col-6{
+    width: 100%;
+  }
+  .Client-information-contents .items-terms-notes{
+    margin-top: 1em;
+  }
+  .Client-information-contents .submit-checkbox{
+    align-items: baseline !important ;
+  }
+  .Client-information-contents .form-control {
+    width: 100%;
+}
+}
+@media only screen and (max-width:992px) {
+    .contents-items-choose .items-FloorDown .row,  .contents-items-choose .items-FloorUp .row{
+        width: 100% ;
+    }
+    .contents-items-choose .col-md-8{
+        width: 100%;
+
+    }
+    .contents-items-choose .col-4 {
+        width: 100%;
+        margin-top: 1.2em;
+    }
+    
+}
+@media only screen and (max-width:1200px) {
+    .contents-items-choose .items-FloorDown .row,  .contents-items-choose .items-FloorUp .row{
+        width: 100% ;
+    }
+}

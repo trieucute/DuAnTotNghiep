@@ -1,0 +1,51 @@
+.pay_container {
+    font-family: var(--fontRegular);
+
+}
+.pay_container  .card-title{
+    font-family: var(--fontBold);
+    color: var(--colorFont);
+    font-size: 1.2em;
+}
+.pay_container  .card-title.fw-bold{
+    color: var(--colorRed);
+    font-size: 1.3em;
+}
+.pay_container .list-group .list-group-item .fw-bold{
+    color: var(--colorFont);
+    font-family: var(--fontBold);
+
+}
+.pay_container .pay-items{
+    display: none;
+}
+.pay_container .active-items-pay{
+    display: block;
+}
+@media only screen and (max-width: 768px){  
+    .pay_container .col-infor-client, .col-sum-price{
+        margin-top: 2em;
+    }
+    .pay_container{
+        margin: 10em auto;
+    }
+    .pay_container .col-infor-client{
+        margin-top: 2em;
+    }
+    .pay_container .width-main-items .row .col-md-4{
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 921px){
+    .pay_container .width-main-items {
+        width: 100%;
+    }
+    .pay_container .width-main-items .row .col-md-4{
+        width: 50%;
+    }
+    .pay_container .width-main-items .row .col-infor-client{
+        margin-top: 2em;
+        width: 100% !important;
+    }
+}
