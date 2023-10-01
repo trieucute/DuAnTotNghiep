@@ -25,7 +25,10 @@ class Pagination {
   
     listPage() {
       let count = Math.ceil(this.list.length / this.limit);
-      this.pagination.innerHTML = '';
+      if (!this.pagination) {
+        return; // Phần tử .pagination không tồn tại, thoát khỏi hàm
+      }
+      this.pagination.innerHTML = ' ';
   
       if (this.thisPage != 1) {
         let prev = document.createElement('li');
