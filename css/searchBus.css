@@ -167,60 +167,30 @@
     display: none;
 }
 /* ---------------------responsive-------------------------------*/
-@media only screen and (max-width:340px) {
-    .items-bus-station h5 {
-        font-size: 0.7em;
-    }
-    .results-search .tabs {
-        font-size: 0.8em !important;
-       
-    }
-    .results-search h1 {
-        font-size: 0.9em !important;
-    }
-}
-@media only screen and (max-width:560px) {
-    .book-content_container .container {
-        max-width: 566px;
-    }
-    .items-bus-station h5 {
-        font-size: 0.8em;
-    }
-    .item-results-bus {
-        padding: 15px 9px;
-    }
-    .item-about-bus .list-group-item {
+
+
+@media only screen and (max-width:1024px) {
+    .search-results .btn-choose button {
+        padding: 7px 16px;
         font-size: 0.8rem;
     }
-    .item-results-bus .w-75{
-        width: 100%  !important;
-        
+    .search-bus-routers {
+        width: 100%;
     }
-    .item-results-bus .travel{
-        padding: 0 0.4em;
-    }
-    .item-results-bus .travel .travel_time {
-        width: 25%
-    }
-    .search-results .btn-choose {
-      display: none;
-    }
-    .results-search .tabs {
-        font-size: 0.9rem;
-       
-    }
-    .results-search h1 {
-        font-size: 1em;
-    }
-}
-@media only screen and (max-width:768px) {
-    .book-content_container .container {
-        max-width: 746px;
-    }
-   
 }
 @media only screen and (max-width:992px) {
-
+    .search-results .btn-choose button a{
+        font-size: 16px;
+    } 
+    .search-results .btn-choose button {
+        width: 70%;
+    } 
+    .item-about-bus.w-75{
+        width: 70% !important;
+       }
+       .search-results .btn-choose.w-25  {
+        width: 30% !important;
+      }
     .filter-toggler{
         display: block;
         bottom: 10px;
@@ -319,12 +289,77 @@
     }
 }
 
-@media only screen and (max-width:1024px) {
-    .search-results .btn-choose button {
-        padding: 7px 16px;
+@media only screen and (max-width:768px) {
+    .book-content_container .container {
+        max-width: 746px;
+    }
+   .item-about-bus.w-75{
+    width: 70% !important;
+   }
+   .search-results .btn-choose.w-25  {
+    width: 30% !important;
+  }
+  .search-results .btn-choose button {
+    width: 80%;
+} 
+.search-results .btn-choose button a{
+    font-size: 13.5px;
+} 
+}
+@media only screen and (max-width:560px) {
+    .book-content_container .container {
+        max-width: 566px;
+    }
+    .items-bus-station h5 {
+        font-size: 0.8em;
+    }
+    .item-results-bus {
+        padding: 15px 9px;
+    }
+    .item-about-bus .list-group-item {
         font-size: 0.8rem;
     }
-    .search-bus-routers {
+    .item-results-bus .w-75{
+        width: 100%  !important;
+        
+    }
+    .item-results-bus .travel{
+        padding: 0 0.4em;
+    }
+    .item-results-bus .travel .travel_time {
+        width: 25%
+    }
+    .search-results .btn-choose.w-25  {
+      /* display: none; */
+      margin-top: 5px;
+      width: 100% !important;
+    }
+    .search-results .btn-choose button {
         width: 100%;
+    } 
+    .search-results .btn-choose button a{
+        font-size: 13px;
+    } 
+    .item-results-bus {
+        max-height: 180px
+    }
+    .results-search .tabs {
+        font-size: 0.9rem;
+       
+    }
+    .results-search h1 {
+        font-size: 1em;
+    }
+}
+@media only screen and (max-width:340px) {
+    .items-bus-station h5 {
+        font-size: 0.7em;
+    }
+    .results-search .tabs {
+        font-size: 0.8em !important;
+       
+    }
+    .results-search h1 {
+        font-size: 0.9em !important;
     }
 }
