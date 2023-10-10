@@ -14,6 +14,10 @@ max-height: 500px;
   position: relative;
 width: 100%;
 }
+.container.container-banner-index{
+  max-width: 1460px;
+  padding: 0 0;
+}
 .banner::after {
     content: '';
     height: 100%;
@@ -47,6 +51,10 @@ width: 93%;
 margin: 0 auto;
 }
 /* -----------------------------------------book vé --------------------------------*/
+.book-content_container.container{
+  max-width: 1460px;
+  padding: 0 0;
+}
 .book-content_container{
   position: relative;
  
@@ -186,16 +194,24 @@ margin: 0 auto;
 
 /* -----------------------------------------tuyến xe phố biến_popular ----------------------------------------*/
 .mt{
-  margin-top: 8%;
+  margin-top: 8em;
 
 }
 .RoutesBus{
   margin-bottom: 20px;
 }
-
+.RoutesBus.container{
+  max-width: 1440px;
+}
 .bus_popular .mt-8{
   margin: 20px 0;
   height: auto;
+}
+.bus_popular.width-main-items{
+  width: 100%;
+}
+.title_home_bus{
+  padding-left: 1.5rem!important;
 }
 .title_home_bus h1{
   font-size: 23px;
@@ -245,6 +261,10 @@ margin: 0 auto;
  margin-top: 40px ;
 }
 
+.SystemBus.container{
+  max-width: 1440px;
+
+ }
 .contentsTopFleet{
   position: relative;
   margin-top: 20px ;
@@ -340,7 +360,11 @@ transition: all 2s ease-in;
 .TouristInformation{
   margin-top: 50px;
 }
+.TouristInformation.container{
 
+    max-width: 1440px;
+  
+}
 .container-tour-infor{
   /* height: 293px; */
 
@@ -456,10 +480,15 @@ transition: all 2s ease-in;
 /* -----------------------------------------introduce-information ----------------------------------------*/
 .introduce-web-container{
   margin: 50px 0;
-  border-radius: 20px;
   max-height: 300px;
   height: 90%;
+}
+.introduce-web-container .container{
   background-color: var(--colorMain);
+  border-radius: 20px;
+ 
+    max-width: 1440px;
+  
 }
 .introduce-web-container h1{
   color: white;
@@ -648,13 +677,21 @@ transition: all 2s ease-in;
     width: 100%;
     height: 200px !important;
   }
+  .RoutesBus.mt {
+    margin-top: 3em !important;
+  }
+  .title_home_bus {
+    padding-left: 0 !important;
+  }
 }
 @media only screen and (max-width: 380px) {
   .carousel-banner .carousel-item img {
     width: 100%;
     height: 130px !important;
   }
+
 }
+
 @media only screen and (min-width: 480px){
 
 /* ----------------------------------------tuyến xe phổ biến ----------------------------------------*/
@@ -685,7 +722,7 @@ transition: all 2s ease-in;
   font-size: 14px;
 }
 .RoutesBus.mt {
-  margin-top: 7% !important;
+  margin-top: 3em !important;
 }
 .trip-book label{
   font-size: 14px;
@@ -784,9 +821,9 @@ line-height: 9px
   .book-contents {
     bottom: -90px;
   }
-  .RoutesBus.mt{
+  /* .RoutesBus.mt{
     margin-top: 11%;
-  }
+  } */
 }
 @media only screen and (max-width: 768px){
   .carousel-banner .carousel-item img {
@@ -817,7 +854,7 @@ line-height: 9px
    bottom: -70px !important;
 }
 .RoutesBus.mt{
-  margin-top: 11% !important;
+  margin-top:   8em !important;
 }
 .book-ticket .button_search_ticket{
   left: 55%;
@@ -915,9 +952,9 @@ line-height: 11px
   .app .mt-10{
     margin-top: 8em;
   }
-  .RoutesBus.mt {
+  /* .RoutesBus.mt {
     margin-top: 8% !important;
-}
+} */
   .container-tour-infor .col-md-3 {
     /* flex: 0 0 auto; */
     width: 25%;

@@ -1,4 +1,7 @@
 @import url(./global.css);
+.navbar-expand-lg .container-xxl {
+  max-width: 1444px;
+}
 .navbar {
   /* max-height: 124px; */
   align-items: stretch !important;
